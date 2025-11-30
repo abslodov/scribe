@@ -1,3 +1,4 @@
+```text
 oracle-ear/
 ├── src/
 │   └── index.ts       # The "Ironclad" logic
@@ -6,6 +7,7 @@ oracle-ear/
 ├── tsconfig.json      # Strict Typescript config
 ├── .gitignore         # Safety first
 └── README.md          # The manual on *why* this is built this way
+```
 
 # Oracle Ear - Discord Chirp 3 Transcriber
 
