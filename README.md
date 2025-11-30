@@ -34,3 +34,18 @@ This bot requires **CPU always allocated** because Discord voice relies on a per
 ### 1. Build
 ```bash
 gcloud builds submit --tag gcr.io/YOUR_PROJECT_ID/oracle-ear
+
+gcloud run deploy oracle-ear \
+  --image gcr.io/YOUR_PROJECT_ID/oracle-ear \
+  --project YOUR_PROJECT_ID \
+  --region us-central1 \
+  --no-cpu-throttling \
+  --min-instances 1 \
+  --port 8080 \
+  --set-env-vars DISCORD_TOKEN="YOUR_TOKEN",GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"
+
+DISCORD_TOKEN: Your bot token.
+
+GOOGLE_CLOUD_PROJECT: Your Project ID.
+
+GOOGLE_CREDENTIALS_BASE64: (Optional) Only needed if not running on GCP infrastructure.
