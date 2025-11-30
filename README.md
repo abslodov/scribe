@@ -1,3 +1,12 @@
+oracle-ear/
+├── src/
+│   └── index.ts       # The "Ironclad" logic
+├── Dockerfile         # Debian-based build (required for Opus/Sodium)
+├── package.json       # Dependencies including raw gRPC
+├── tsconfig.json      # Strict Typescript config
+├── .gitignore         # Safety first
+└── README.md          # The manual on *why* this is built this way
+
 # Oracle Ear - Discord Chirp 3 Transcriber
 
 A production-grade Discord Bot that uses **Google Cloud Speech-to-Text V2 (Chirp 3)** to live-transcribe voice channels into Firestore.
